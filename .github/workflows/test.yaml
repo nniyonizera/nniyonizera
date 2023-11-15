@@ -1,15 +1,17 @@
 name: test workflow
-on: repository_dispatch
+on: 
+  workflow_dispatch:
+      inputs:  
+         comment:
+            description: "Enter Comment"
+            required: true
+            type: string
    
 
 jobs: 
     display_hello_message: 
           runs-on: ubuntu-latest
-          inputs:  
-             comment:
-                description: "Enter Comment"
-                required: yes
-                type: string
+          
           steps:
               - name: " echo input comment"
                 run: | 
