@@ -16,5 +16,6 @@ jobs:
               - name: " echo input comment"
                 run: | 
                   echo "comment: ${{ inputs.comment }} "
+                  echo "Secret: ${{secrets.TEST_SECRET}}"
          
              
